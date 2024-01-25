@@ -1,0 +1,985 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B0936FB2B132F1C001DA56A /* KicksDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0936FA2B132F1C001DA56A /* KicksDataModel.swift */; };
+		2B0936FF2B1344EA001DA56A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0936FE2B1344EA001DA56A /* TabBarController.swift */; };
+		2B1ED36B2B1890470057D2FB /* ImageDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ED3692B1890470057D2FB /* ImageDetailTableViewCell.swift */; };
+		2B1ED36C2B1890470057D2FB /* ImageDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1ED36A2B1890470057D2FB /* ImageDetailTableViewCell.xib */; };
+		2B1ED36F2B1891180057D2FB /* SingleLabelDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ED36D2B1891180057D2FB /* SingleLabelDetailTableViewCell.swift */; };
+		2B1ED3702B1891180057D2FB /* SingleLabelDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1ED36E2B1891180057D2FB /* SingleLabelDetailTableViewCell.xib */; };
+		2B1ED3732B1891510057D2FB /* ThreeLabelDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ED3712B1891510057D2FB /* ThreeLabelDetailTableViewCell.swift */; };
+		2B1ED3742B1891510057D2FB /* ThreeLabelDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1ED3722B1891510057D2FB /* ThreeLabelDetailTableViewCell.xib */; };
+		2B1ED3772B1891750057D2FB /* AmountDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ED3752B1891750057D2FB /* AmountDetailTableViewCell.swift */; };
+		2B1ED3782B1891750057D2FB /* AmountDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1ED3762B1891750057D2FB /* AmountDetailTableViewCell.xib */; };
+		2B4182C32A546E5D00A92712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4182C22A546E5D00A92712 /* AppDelegate.swift */; };
+		2B4182C52A546E5D00A92712 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4182C42A546E5D00A92712 /* SceneDelegate.swift */; };
+		2B4182CA2A546E5D00A92712 /* KicksListBaseView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4182C82A546E5D00A92712 /* KicksListBaseView.storyboard */; };
+		2B4182CC2A546E5F00A92712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4182CB2A546E5F00A92712 /* Assets.xcassets */; };
+		2B4182CF2A546E5F00A92712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4182CD2A546E5F00A92712 /* LaunchScreen.storyboard */; };
+		2B4182DA2A546E5F00A92712 /* KicksListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4182D92A546E5F00A92712 /* KicksListTests.swift */; };
+		2B4182E42A546E5F00A92712 /* KicksListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4182E32A546E5F00A92712 /* KicksListUITests.swift */; };
+		2B4182E62A546E5F00A92712 /* KicksListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4182E52A546E5F00A92712 /* KicksListUITestsLaunchTests.swift */; };
+		2B52B5B92A86D11100C60B68 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52B5B82A86D11100C60B68 /* PlaceHolderTextView.swift */; };
+		2B52B5BB2A86D82000C60B68 /* KicksDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52B5BA2A86D82000C60B68 /* KicksDetailViewController.swift */; };
+		2B52B5BD2A86D83500C60B68 /* KicksDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B52B5BC2A86D83500C60B68 /* KicksDetailView.storyboard */; };
+		2B52B5C02A86F61200C60B68 /* OneDateInputKicksInfoTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52B5BE2A86F61200C60B68 /* OneDateInputKicksInfoTableViewCellController.swift */; };
+		2B52B5C12A86F61200C60B68 /* OneDateInputKicksInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B52B5BF2A86F61200C60B68 /* OneDateInputKicksInfoTableViewCell.xib */; };
+		2B5464D62A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5464D42A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCellController.swift */; };
+		2B5464D72A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5464D52A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCell.xib */; };
+		2B5464DA2A77BBA900847873 /* ImageSetKicksInfoTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5464D82A77BBA900847873 /* ImageSetKicksInfoTableViewCellController.swift */; };
+		2B5464DB2A77BBA900847873 /* ImageSetKicksInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5464D92A77BBA900847873 /* ImageSetKicksInfoTableViewCell.xib */; };
+		2B61AB3C2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B61AB3A2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCellController.swift */; };
+		2B61AB3D2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B61AB3B2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCell.xib */; };
+		2B6E50AC2A766AC80025ECDC /* InputKicksInfoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E50AB2A766AC80025ECDC /* InputKicksInfoView.storyboard */; };
+		2B6E50AE2A766B290025ECDC /* InputKicksInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E50AD2A766B290025ECDC /* InputKicksInfoViewController.swift */; };
+		2B6E50B12A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E50AF2A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCellController.swift */; };
+		2B6E50B22A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E50B02A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCell.xib */; };
+		2B766ECE2A76AA7E00061457 /* ColorInputKicksInfoTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B766ECC2A76AA7E00061457 /* ColorInputKicksInfoTableViewCellController.swift */; };
+		2B766ECF2A76AA7E00061457 /* ColorInputKicksInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B766ECD2A76AA7E00061457 /* ColorInputKicksInfoTableViewCell.xib */; };
+		2B8D78942A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D78922A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCellController.swift */; };
+		2B8D78952A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B8D78932A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCell.xib */; };
+		2BA69ACF2A82492E009B50D5 /* AssetsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA69ACE2A82492E009B50D5 /* AssetsView.storyboard */; };
+		2BA69AD12A824962009B50D5 /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA69AD02A824962009B50D5 /* AssetsViewController.swift */; };
+		2BB1C4902A791176009FCF0C /* KicksListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1C48E2A791176009FCF0C /* KicksListCollectionViewController.swift */; };
+		2BB1C4912A791176009FCF0C /* KicksListCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BB1C48F2A791176009FCF0C /* KicksListCollectionView.xib */; };
+		2BC5D8292AD83D1E00858122 /* AddDoneButtonToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5D8282AD83D1E00858122 /* AddDoneButtonToKeyboard.swift */; };
+		2BDBA14A2A5E8A2500FAFC18 /* TwoGridCollectionViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDBA1482A5E8A2500FAFC18 /* TwoGridCollectionViewCellController.swift */; };
+		2BDBA14B2A5E8A2500FAFC18 /* TwoGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDBA1492A5E8A2500FAFC18 /* TwoGridCollectionViewCell.xib */; };
+		751E5118F63F9C8943800F88 /* Pods_KicksListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9ABBD65CACD273B4444749A /* Pods_KicksListTests.framework */; };
+		CE506968277269515E9DB3A8 /* Pods_KicksList_KicksListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFCA6CA352CA87F8C5D6B79 /* Pods_KicksList_KicksListUITests.framework */; };
+		F365288DAF0474102D7B612D /* Pods_KicksList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8B657C4BA632799A4F9546 /* Pods_KicksList.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B4182D62A546E5F00A92712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B4182B72A546E5D00A92712 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B4182BE2A546E5D00A92712;
+			remoteInfo = SneakerList;
+		};
+		2B4182E02A546E5F00A92712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B4182B72A546E5D00A92712 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B4182BE2A546E5D00A92712;
+			remoteInfo = SneakerList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B0936FA2B132F1C001DA56A /* KicksDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksDataModel.swift; sourceTree = "<group>"; };
+		2B0936FE2B1344EA001DA56A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		2B1ED3692B1890470057D2FB /* ImageDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2B1ED36A2B1890470057D2FB /* ImageDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailTableViewCell.xib; sourceTree = "<group>"; };
+		2B1ED36D2B1891180057D2FB /* SingleLabelDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLabelDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2B1ED36E2B1891180057D2FB /* SingleLabelDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLabelDetailTableViewCell.xib; sourceTree = "<group>"; };
+		2B1ED3712B1891510057D2FB /* ThreeLabelDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeLabelDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2B1ED3722B1891510057D2FB /* ThreeLabelDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreeLabelDetailTableViewCell.xib; sourceTree = "<group>"; };
+		2B1ED3752B1891750057D2FB /* AmountDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2B1ED3762B1891750057D2FB /* AmountDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountDetailTableViewCell.xib; sourceTree = "<group>"; };
+		2B4182BF2A546E5D00A92712 /* KicksList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KicksList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4182C22A546E5D00A92712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B4182C42A546E5D00A92712 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B4182C92A546E5D00A92712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/KicksListBaseView.storyboard; sourceTree = "<group>"; };
+		2B4182CB2A546E5F00A92712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B4182CE2A546E5F00A92712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B4182D02A546E5F00A92712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B4182D52A546E5F00A92712 /* KicksListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KicksListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4182D92A546E5F00A92712 /* KicksListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksListTests.swift; sourceTree = "<group>"; };
+		2B4182DF2A546E5F00A92712 /* KicksListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KicksListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4182E32A546E5F00A92712 /* KicksListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksListUITests.swift; sourceTree = "<group>"; };
+		2B4182E52A546E5F00A92712 /* KicksListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B52B5B82A86D11100C60B68 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
+		2B52B5BA2A86D82000C60B68 /* KicksDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksDetailViewController.swift; sourceTree = "<group>"; };
+		2B52B5BC2A86D83500C60B68 /* KicksDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KicksDetailView.storyboard; sourceTree = "<group>"; };
+		2B52B5BE2A86F61200C60B68 /* OneDateInputKicksInfoTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDateInputKicksInfoTableViewCellController.swift; sourceTree = "<group>"; };
+		2B52B5BF2A86F61200C60B68 /* OneDateInputKicksInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneDateInputKicksInfoTableViewCell.xib; sourceTree = "<group>"; };
+		2B5464D42A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTextFieldInputKicksInfoTableViewCellController.swift; sourceTree = "<group>"; };
+		2B5464D52A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleTextFieldInputKicksInfoTableViewCell.xib; sourceTree = "<group>"; };
+		2B5464D82A77BBA900847873 /* ImageSetKicksInfoTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSetKicksInfoTableViewCellController.swift; sourceTree = "<group>"; };
+		2B5464D92A77BBA900847873 /* ImageSetKicksInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSetKicksInfoTableViewCell.xib; sourceTree = "<group>"; };
+		2B61AB3A2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputKicksInfoTableViewCellController.swift; sourceTree = "<group>"; };
+		2B61AB3B2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountInputKicksInfoTableViewCell.xib; sourceTree = "<group>"; };
+		2B6E50AB2A766AC80025ECDC /* InputKicksInfoView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputKicksInfoView.storyboard; sourceTree = "<group>"; };
+		2B6E50AD2A766B290025ECDC /* InputKicksInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputKicksInfoViewController.swift; sourceTree = "<group>"; };
+		2B6E50AF2A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTextViewInputKicksInfoTableViewCellController.swift; sourceTree = "<group>"; };
+		2B6E50B02A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleTextViewInputKicksInfoTableViewCell.xib; sourceTree = "<group>"; };
+		2B766ECC2A76AA7E00061457 /* ColorInputKicksInfoTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInputKicksInfoTableViewCellController.swift; sourceTree = "<group>"; };
+		2B766ECD2A76AA7E00061457 /* ColorInputKicksInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorInputKicksInfoTableViewCell.xib; sourceTree = "<group>"; };
+		2B8D78922A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDateInputKicksInfoTableViewCellController.swift; sourceTree = "<group>"; };
+		2B8D78932A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreeDateInputKicksInfoTableViewCell.xib; sourceTree = "<group>"; };
+		2BA69ACE2A82492E009B50D5 /* AssetsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssetsView.storyboard; sourceTree = "<group>"; };
+		2BA69AD02A824962009B50D5 /* AssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewController.swift; sourceTree = "<group>"; };
+		2BB1C48E2A791176009FCF0C /* KicksListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksListCollectionViewController.swift; sourceTree = "<group>"; };
+		2BB1C48F2A791176009FCF0C /* KicksListCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KicksListCollectionView.xib; sourceTree = "<group>"; };
+		2BC5D8282AD83D1E00858122 /* AddDoneButtonToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDoneButtonToKeyboard.swift; sourceTree = "<group>"; };
+		2BDBA1482A5E8A2500FAFC18 /* TwoGridCollectionViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoGridCollectionViewCellController.swift; sourceTree = "<group>"; };
+		2BDBA1492A5E8A2500FAFC18 /* TwoGridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoGridCollectionViewCell.xib; sourceTree = "<group>"; };
+		4A8B657C4BA632799A4F9546 /* Pods_KicksList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KicksList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D4B869A23EC55887CD9028 /* Pods-KicksList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KicksList.release.xcconfig"; path = "Target Support Files/Pods-KicksList/Pods-KicksList.release.xcconfig"; sourceTree = "<group>"; };
+		618C48F4D5F197799FC5771F /* Pods-KicksList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KicksList.debug.xcconfig"; path = "Target Support Files/Pods-KicksList/Pods-KicksList.debug.xcconfig"; sourceTree = "<group>"; };
+		65A607AD3FB520075C1E49B5 /* Pods-KicksListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KicksListTests.debug.xcconfig"; path = "Target Support Files/Pods-KicksListTests/Pods-KicksListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3CDC6BB978AE97F040E9A93 /* Pods-KicksList-KicksListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KicksList-KicksListUITests.debug.xcconfig"; path = "Target Support Files/Pods-KicksList-KicksListUITests/Pods-KicksList-KicksListUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAFCA6CA352CA87F8C5D6B79 /* Pods_KicksList_KicksListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KicksList_KicksListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9ABBD65CACD273B4444749A /* Pods_KicksListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KicksListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA54D446CC1459C26E0BDFBC /* Pods-KicksList-KicksListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KicksList-KicksListUITests.release.xcconfig"; path = "Target Support Files/Pods-KicksList-KicksListUITests/Pods-KicksList-KicksListUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FFD6F8B4CB255D1D53B06200 /* Pods-KicksListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KicksListTests.release.xcconfig"; path = "Target Support Files/Pods-KicksListTests/Pods-KicksListTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B4182BC2A546E5D00A92712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F365288DAF0474102D7B612D /* Pods_KicksList.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4182D22A546E5F00A92712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751E5118F63F9C8943800F88 /* Pods_KicksListTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4182DC2A546E5F00A92712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE506968277269515E9DB3A8 /* Pods_KicksList_KicksListUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B1ED3672B188E650057D2FB /* KicksDetailCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B1ED36A2B1890470057D2FB /* ImageDetailTableViewCell.xib */,
+				2B1ED36E2B1891180057D2FB /* SingleLabelDetailTableViewCell.xib */,
+				2B1ED3722B1891510057D2FB /* ThreeLabelDetailTableViewCell.xib */,
+				2B1ED3762B1891750057D2FB /* AmountDetailTableViewCell.xib */,
+			);
+			path = KicksDetailCustomCell;
+			sourceTree = "<group>";
+		};
+		2B1ED3682B188F120057D2FB /* KicksDetailCutomCellController */ = {
+			isa = PBXGroup;
+			children = (
+				2B1ED3692B1890470057D2FB /* ImageDetailTableViewCell.swift */,
+				2B1ED36D2B1891180057D2FB /* SingleLabelDetailTableViewCell.swift */,
+				2B1ED3712B1891510057D2FB /* ThreeLabelDetailTableViewCell.swift */,
+				2B1ED3752B1891750057D2FB /* AmountDetailTableViewCell.swift */,
+			);
+			path = KicksDetailCutomCellController;
+			sourceTree = "<group>";
+		};
+		2B3DA7D82B613C130096C9D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B0936FA2B132F1C001DA56A /* KicksDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B3DA7DA2B613C840096C9D3 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2B4182C22A546E5D00A92712 /* AppDelegate.swift */,
+				2B4182C42A546E5D00A92712 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		2B4182B62A546E5D00A92712 = {
+			isa = PBXGroup;
+			children = (
+				2B4182C12A546E5D00A92712 /* KicksList */,
+				2B4182D82A546E5F00A92712 /* KicksListTests */,
+				2B4182E22A546E5F00A92712 /* KicksListUITests */,
+				2B4182C02A546E5D00A92712 /* Products */,
+				9FAF3F6833DDF4ACA242505E /* Pods */,
+				F5BC878CC231430B66FF79B5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B4182C02A546E5D00A92712 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B4182BF2A546E5D00A92712 /* KicksList.app */,
+				2B4182D52A546E5F00A92712 /* KicksListTests.xctest */,
+				2B4182DF2A546E5F00A92712 /* KicksListUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B4182C12A546E5D00A92712 /* KicksList */ = {
+			isa = PBXGroup;
+			children = (
+				2B3DA7D82B613C130096C9D3 /* Model */,
+				2B8F05142B6143660039FAB6 /* View */,
+				2B8F05152B61438B0039FAB6 /* Controller */,
+				2B8F05162B6143AD0039FAB6 /* Extension */,
+				2B3DA7DA2B613C840096C9D3 /* Delegate */,
+				2B52B5B82A86D11100C60B68 /* PlaceHolderTextView.swift */,
+				2B4182CB2A546E5F00A92712 /* Assets.xcassets */,
+				2B4182D02A546E5F00A92712 /* Info.plist */,
+			);
+			path = KicksList;
+			sourceTree = "<group>";
+		};
+		2B4182D82A546E5F00A92712 /* KicksListTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B4182D92A546E5F00A92712 /* KicksListTests.swift */,
+			);
+			path = KicksListTests;
+			sourceTree = "<group>";
+		};
+		2B4182E22A546E5F00A92712 /* KicksListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B4182E32A546E5F00A92712 /* KicksListUITests.swift */,
+				2B4182E52A546E5F00A92712 /* KicksListUITestsLaunchTests.swift */,
+			);
+			path = KicksListUITests;
+			sourceTree = "<group>";
+		};
+		2B5464DE2A77C13D00847873 /* InputKicksInfoCustomCellController */ = {
+			isa = PBXGroup;
+			children = (
+				2B5464D82A77BBA900847873 /* ImageSetKicksInfoTableViewCellController.swift */,
+				2B6E50AF2A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCellController.swift */,
+				2B5464D42A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCellController.swift */,
+				2B766ECC2A76AA7E00061457 /* ColorInputKicksInfoTableViewCellController.swift */,
+				2B8D78922A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCellController.swift */,
+				2B52B5BE2A86F61200C60B68 /* OneDateInputKicksInfoTableViewCellController.swift */,
+				2B61AB3A2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCellController.swift */,
+			);
+			path = InputKicksInfoCustomCellController;
+			sourceTree = "<group>";
+		};
+		2B8F05142B6143660039FAB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B4182CD2A546E5F00A92712 /* LaunchScreen.storyboard */,
+				2B4182C82A546E5D00A92712 /* KicksListBaseView.storyboard */,
+				2BB1C48F2A791176009FCF0C /* KicksListCollectionView.xib */,
+				2BDBA1492A5E8A2500FAFC18 /* TwoGridCollectionViewCell.xib */,
+				2B6E50AB2A766AC80025ECDC /* InputKicksInfoView.storyboard */,
+				2BA292E72B6146BD0044D4D2 /* InputKicksInfoCustomCell */,
+				2B52B5BC2A86D83500C60B68 /* KicksDetailView.storyboard */,
+				2B1ED3672B188E650057D2FB /* KicksDetailCustomCell */,
+				2BA69ACE2A82492E009B50D5 /* AssetsView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B8F05152B61438B0039FAB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B0936FE2B1344EA001DA56A /* TabBarController.swift */,
+				2BB1C48E2A791176009FCF0C /* KicksListCollectionViewController.swift */,
+				2BDBA1482A5E8A2500FAFC18 /* TwoGridCollectionViewCellController.swift */,
+				2B6E50AD2A766B290025ECDC /* InputKicksInfoViewController.swift */,
+				2B5464DE2A77C13D00847873 /* InputKicksInfoCustomCellController */,
+				2B52B5BA2A86D82000C60B68 /* KicksDetailViewController.swift */,
+				2B1ED3682B188F120057D2FB /* KicksDetailCutomCellController */,
+				2BA69AD02A824962009B50D5 /* AssetsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B8F05162B6143AD0039FAB6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2BC5D8282AD83D1E00858122 /* AddDoneButtonToKeyboard.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2BA292E72B6146BD0044D4D2 /* InputKicksInfoCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B5464D92A77BBA900847873 /* ImageSetKicksInfoTableViewCell.xib */,
+				2B6E50B02A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCell.xib */,
+				2B5464D52A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCell.xib */,
+				2B766ECD2A76AA7E00061457 /* ColorInputKicksInfoTableViewCell.xib */,
+				2B8D78932A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCell.xib */,
+				2B52B5BF2A86F61200C60B68 /* OneDateInputKicksInfoTableViewCell.xib */,
+				2B61AB3B2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCell.xib */,
+			);
+			path = InputKicksInfoCustomCell;
+			sourceTree = "<group>";
+		};
+		9FAF3F6833DDF4ACA242505E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				618C48F4D5F197799FC5771F /* Pods-KicksList.debug.xcconfig */,
+				55D4B869A23EC55887CD9028 /* Pods-KicksList.release.xcconfig */,
+				A3CDC6BB978AE97F040E9A93 /* Pods-KicksList-KicksListUITests.debug.xcconfig */,
+				FA54D446CC1459C26E0BDFBC /* Pods-KicksList-KicksListUITests.release.xcconfig */,
+				65A607AD3FB520075C1E49B5 /* Pods-KicksListTests.debug.xcconfig */,
+				FFD6F8B4CB255D1D53B06200 /* Pods-KicksListTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F5BC878CC231430B66FF79B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A8B657C4BA632799A4F9546 /* Pods_KicksList.framework */,
+				AAFCA6CA352CA87F8C5D6B79 /* Pods_KicksList_KicksListUITests.framework */,
+				E9ABBD65CACD273B4444749A /* Pods_KicksListTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B4182BE2A546E5D00A92712 /* KicksList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4182E92A546E5F00A92712 /* Build configuration list for PBXNativeTarget "KicksList" */;
+			buildPhases = (
+				31DB275787F149C4A72E6707 /* [CP] Check Pods Manifest.lock */,
+				2B4182BB2A546E5D00A92712 /* Sources */,
+				2B4182BC2A546E5D00A92712 /* Frameworks */,
+				2B4182BD2A546E5D00A92712 /* Resources */,
+				90CC78E9C291E4B9712FA314 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KicksList;
+			productName = SneakerList;
+			productReference = 2B4182BF2A546E5D00A92712 /* KicksList.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B4182D42A546E5F00A92712 /* KicksListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4182EC2A546E5F00A92712 /* Build configuration list for PBXNativeTarget "KicksListTests" */;
+			buildPhases = (
+				5A5612B9C6AD2977D11E4B02 /* [CP] Check Pods Manifest.lock */,
+				2B4182D12A546E5F00A92712 /* Sources */,
+				2B4182D22A546E5F00A92712 /* Frameworks */,
+				2B4182D32A546E5F00A92712 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B4182D72A546E5F00A92712 /* PBXTargetDependency */,
+			);
+			name = KicksListTests;
+			productName = SneakerListTests;
+			productReference = 2B4182D52A546E5F00A92712 /* KicksListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B4182DE2A546E5F00A92712 /* KicksListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4182EF2A546E5F00A92712 /* Build configuration list for PBXNativeTarget "KicksListUITests" */;
+			buildPhases = (
+				84A7DD6983D6E0BD9D050F68 /* [CP] Check Pods Manifest.lock */,
+				2B4182DB2A546E5F00A92712 /* Sources */,
+				2B4182DC2A546E5F00A92712 /* Frameworks */,
+				2B4182DD2A546E5F00A92712 /* Resources */,
+				660BA6C40D397AF71119EBB1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B4182E12A546E5F00A92712 /* PBXTargetDependency */,
+			);
+			name = KicksListUITests;
+			productName = SneakerListUITests;
+			productReference = 2B4182DF2A546E5F00A92712 /* KicksListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B4182B72A546E5D00A92712 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					2B4182BE2A546E5D00A92712 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					2B4182D42A546E5F00A92712 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 2B4182BE2A546E5D00A92712;
+					};
+					2B4182DE2A546E5F00A92712 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 2B4182BE2A546E5D00A92712;
+					};
+				};
+			};
+			buildConfigurationList = 2B4182BA2A546E5D00A92712 /* Build configuration list for PBXProject "KicksList" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B4182B62A546E5D00A92712;
+			productRefGroup = 2B4182C02A546E5D00A92712 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B4182BE2A546E5D00A92712 /* KicksList */,
+				2B4182D42A546E5F00A92712 /* KicksListTests */,
+				2B4182DE2A546E5F00A92712 /* KicksListUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B4182BD2A546E5D00A92712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B6E50B22A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCell.xib in Resources */,
+				2B1ED3782B1891750057D2FB /* AmountDetailTableViewCell.xib in Resources */,
+				2B4182CF2A546E5F00A92712 /* LaunchScreen.storyboard in Resources */,
+				2B5464DB2A77BBA900847873 /* ImageSetKicksInfoTableViewCell.xib in Resources */,
+				2B1ED3702B1891180057D2FB /* SingleLabelDetailTableViewCell.xib in Resources */,
+				2B8D78952A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCell.xib in Resources */,
+				2B61AB3D2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCell.xib in Resources */,
+				2B1ED3742B1891510057D2FB /* ThreeLabelDetailTableViewCell.xib in Resources */,
+				2BA69ACF2A82492E009B50D5 /* AssetsView.storyboard in Resources */,
+				2B1ED36C2B1890470057D2FB /* ImageDetailTableViewCell.xib in Resources */,
+				2B4182CC2A546E5F00A92712 /* Assets.xcassets in Resources */,
+				2BB1C4912A791176009FCF0C /* KicksListCollectionView.xib in Resources */,
+				2B4182CA2A546E5D00A92712 /* KicksListBaseView.storyboard in Resources */,
+				2B52B5BD2A86D83500C60B68 /* KicksDetailView.storyboard in Resources */,
+				2B6E50AC2A766AC80025ECDC /* InputKicksInfoView.storyboard in Resources */,
+				2B5464D72A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCell.xib in Resources */,
+				2B52B5C12A86F61200C60B68 /* OneDateInputKicksInfoTableViewCell.xib in Resources */,
+				2B766ECF2A76AA7E00061457 /* ColorInputKicksInfoTableViewCell.xib in Resources */,
+				2BDBA14B2A5E8A2500FAFC18 /* TwoGridCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4182D32A546E5F00A92712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4182DD2A546E5F00A92712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31DB275787F149C4A72E6707 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KicksList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A5612B9C6AD2977D11E4B02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KicksListTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		660BA6C40D397AF71119EBB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KicksList-KicksListUITests/Pods-KicksList-KicksListUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KicksList-KicksListUITests/Pods-KicksList-KicksListUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KicksList-KicksListUITests/Pods-KicksList-KicksListUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A7DD6983D6E0BD9D050F68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KicksList-KicksListUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90CC78E9C291E4B9712FA314 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KicksList/Pods-KicksList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KicksList/Pods-KicksList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KicksList/Pods-KicksList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B4182BB2A546E5D00A92712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0936FB2B132F1C001DA56A /* KicksDataModel.swift in Sources */,
+				2B1ED3772B1891750057D2FB /* AmountDetailTableViewCell.swift in Sources */,
+				2B4182C32A546E5D00A92712 /* AppDelegate.swift in Sources */,
+				2B4182C52A546E5D00A92712 /* SceneDelegate.swift in Sources */,
+				2B1ED3732B1891510057D2FB /* ThreeLabelDetailTableViewCell.swift in Sources */,
+				2B6E50B12A76742C0025ECDC /* SingleTextViewInputKicksInfoTableViewCellController.swift in Sources */,
+				2B8D78942A77AF13003181AD /* ThreeDateInputKicksInfoTableViewCellController.swift in Sources */,
+				2B5464D62A77B7FB00847873 /* SingleTextFieldInputKicksInfoTableViewCellController.swift in Sources */,
+				2B5464DA2A77BBA900847873 /* ImageSetKicksInfoTableViewCellController.swift in Sources */,
+				2B6E50AE2A766B290025ECDC /* InputKicksInfoViewController.swift in Sources */,
+				2BA69AD12A824962009B50D5 /* AssetsViewController.swift in Sources */,
+				2B1ED36B2B1890470057D2FB /* ImageDetailTableViewCell.swift in Sources */,
+				2B0936FF2B1344EA001DA56A /* TabBarController.swift in Sources */,
+				2B1ED36F2B1891180057D2FB /* SingleLabelDetailTableViewCell.swift in Sources */,
+				2BC5D8292AD83D1E00858122 /* AddDoneButtonToKeyboard.swift in Sources */,
+				2B61AB3C2A86FC6000E45E3C /* AmountInputKicksInfoTableViewCellController.swift in Sources */,
+				2B52B5BB2A86D82000C60B68 /* KicksDetailViewController.swift in Sources */,
+				2B766ECE2A76AA7E00061457 /* ColorInputKicksInfoTableViewCellController.swift in Sources */,
+				2BB1C4902A791176009FCF0C /* KicksListCollectionViewController.swift in Sources */,
+				2B52B5C02A86F61200C60B68 /* OneDateInputKicksInfoTableViewCellController.swift in Sources */,
+				2BDBA14A2A5E8A2500FAFC18 /* TwoGridCollectionViewCellController.swift in Sources */,
+				2B52B5B92A86D11100C60B68 /* PlaceHolderTextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4182D12A546E5F00A92712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4182DA2A546E5F00A92712 /* KicksListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4182DB2A546E5F00A92712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4182E62A546E5F00A92712 /* KicksListUITestsLaunchTests.swift in Sources */,
+				2B4182E42A546E5F00A92712 /* KicksListUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B4182D72A546E5F00A92712 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B4182BE2A546E5D00A92712 /* KicksList */;
+			targetProxy = 2B4182D62A546E5F00A92712 /* PBXContainerItemProxy */;
+		};
+		2B4182E12A546E5F00A92712 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B4182BE2A546E5D00A92712 /* KicksList */;
+			targetProxy = 2B4182E02A546E5F00A92712 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B4182C82A546E5D00A92712 /* KicksListBaseView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B4182C92A546E5D00A92712 /* Base */,
+			);
+			name = KicksListBaseView.storyboard;
+			sourceTree = "<group>";
+		};
+		2B4182CD2A546E5F00A92712 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B4182CE2A546E5F00A92712 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B4182E72A546E5F00A92712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B4182E82A546E5F00A92712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B4182EA2A546E5F00A92712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618C48F4D5F197799FC5771F /* Pods-KicksList.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 85BGHFBLJT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KicksList/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = KicksListBaseView;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tappy.KicksList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B4182EB2A546E5F00A92712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55D4B869A23EC55887CD9028 /* Pods-KicksList.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 85BGHFBLJT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KicksList/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = KicksListBaseView;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tappy.KicksList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B4182ED2A546E5F00A92712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65A607AD3FB520075C1E49B5 /* Pods-KicksListTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 85BGHFBLJT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tappy.KicksListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KicksList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KicksList";
+			};
+			name = Debug;
+		};
+		2B4182EE2A546E5F00A92712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD6F8B4CB255D1D53B06200 /* Pods-KicksListTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 85BGHFBLJT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tappy.KicksListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KicksList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KicksList";
+			};
+			name = Release;
+		};
+		2B4182F02A546E5F00A92712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3CDC6BB978AE97F040E9A93 /* Pods-KicksList-KicksListUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 85BGHFBLJT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tappy.KicksListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KicksList;
+			};
+			name = Debug;
+		};
+		2B4182F12A546E5F00A92712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA54D446CC1459C26E0BDFBC /* Pods-KicksList-KicksListUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 85BGHFBLJT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tappy.KicksListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KicksList;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B4182BA2A546E5D00A92712 /* Build configuration list for PBXProject "KicksList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4182E72A546E5F00A92712 /* Debug */,
+				2B4182E82A546E5F00A92712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B4182E92A546E5F00A92712 /* Build configuration list for PBXNativeTarget "KicksList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4182EA2A546E5F00A92712 /* Debug */,
+				2B4182EB2A546E5F00A92712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B4182EC2A546E5F00A92712 /* Build configuration list for PBXNativeTarget "KicksListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4182ED2A546E5F00A92712 /* Debug */,
+				2B4182EE2A546E5F00A92712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B4182EF2A546E5F00A92712 /* Build configuration list for PBXNativeTarget "KicksListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4182F02A546E5F00A92712 /* Debug */,
+				2B4182F12A546E5F00A92712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B4182B72A546E5D00A92712 /* Project object */;
+}

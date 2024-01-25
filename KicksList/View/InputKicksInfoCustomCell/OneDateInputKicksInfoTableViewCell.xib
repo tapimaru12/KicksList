@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="oneDateInputCell" rowHeight="124" id="KGk-i7-Jjw" customClass="OneDateInputKicksInfoTableViewCellController" customModule="KicksList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="491" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="491" height="124"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="QXb-UN-nhU">
+                        <rect key="frame" x="10" y="25" width="471" height="74"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手放した日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKx-MP-DS1">
+                                <rect key="frame" x="0.0" y="0.0" width="471" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="RhH-2m-fjc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Bbz-rA-G4k">
+                                <rect key="frame" x="0.0" y="27" width="471" height="47"/>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QXb-UN-nhU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="CuL-Q2-y7Z"/>
+                    <constraint firstItem="QXb-UN-nhU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="OxU-HU-Fd9"/>
+                    <constraint firstAttribute="trailing" secondItem="QXb-UN-nhU" secondAttribute="trailing" constant="10" id="al2-M6-Pd5"/>
+                    <constraint firstAttribute="bottom" secondItem="QXb-UN-nhU" secondAttribute="bottom" constant="25" id="duv-Mp-AH0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lostDateLabel" destination="kKx-MP-DS1" id="KcA-Ch-pJg"/>
+                <outlet property="lostDatePicker" destination="Bbz-rA-G4k" id="ORV-gC-fCz"/>
+            </connections>
+            <point key="canvasLocation" x="211" y="12"/>
+        </tableViewCell>
+    </objects>
+</document>

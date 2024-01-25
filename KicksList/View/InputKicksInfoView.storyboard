@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SPg-Oo-IgW">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input Kicks Info-->
+        <scene sceneID="9nR-SC-R4B">
+            <objects>
+                <viewController storyboardIdentifier="inputKicksInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SPg-Oo-IgW" userLabel="Input Kicks Info" customClass="InputKicksInfoViewController" customModule="KicksList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P3i-kw-LsK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-N9-Vh0">
+                                <rect key="frame" x="0.0" y="94" width="375" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DAL-iJ-Au5"/>
+                        <keyboardLayoutGuide key="keyboard" id="j6q-g8-C1w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jlx-N9-Vh0" firstAttribute="leading" secondItem="DAL-iJ-Au5" secondAttribute="leading" id="WxU-GP-b2Z"/>
+                            <constraint firstItem="j6q-g8-C1w" firstAttribute="top" secondItem="jlx-N9-Vh0" secondAttribute="bottom" id="lwW-bK-dFB"/>
+                            <constraint firstItem="DAL-iJ-Au5" firstAttribute="trailing" secondItem="jlx-N9-Vh0" secondAttribute="trailing" id="wDe-gW-gIP"/>
+                            <constraint firstItem="jlx-N9-Vh0" firstAttribute="top" secondItem="DAL-iJ-Au5" secondAttribute="top" id="whQ-1u-bq3"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Input Kicks Info" id="sQS-Ao-O98">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="MY3-3D-znE">
+                            <connections>
+                                <action selector="saveButton:" destination="SPg-Oo-IgW" id="hWl-Re-QXZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="jlx-N9-Vh0" id="Ade-br-xyG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dlo-Yb-xNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="-267"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
