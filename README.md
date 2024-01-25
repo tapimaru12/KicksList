@@ -9,8 +9,7 @@
 - Language：Swift
 - Version：5.9.2
 - Xcode：15.2
-- URL：
-- Architecture：
+- Architecture：MVC
 
 ### ライブラリ
 
