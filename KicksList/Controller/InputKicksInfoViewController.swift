@@ -86,8 +86,15 @@ class InputKicksInfoViewController: UIViewController, UITextViewDelegate, UIText
         tableView.register(UINib(nibName: "SingleTextFieldInputKicksInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "singleTextFieldInputCell")
         tableView.register(UINib(nibName: "ColorInputKicksInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "colorInputCell")
         tableView.register(UINib(nibName: "ThreeDateInputKicksInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "threeDateInputCell")
-        tableView.register(UINib(nibName: "OneDateInputKicksInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "oneDateInputCell")
         tableView.register(UINib(nibName: "AmountInputKicksInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "amountInputCell")
+        
+        if isNow {
+            // 「手放した日」セクションを除外する
+            sectionArray.removeAll(where: { $0 == InputSection.oneDate })
+        } else {
+            // 「手放した日」セクション用のxibを登録
+            tableView.register(UINib(nibName: "OneDateInputKicksInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "oneDateInputCell")
+        }
     }
     
     
@@ -472,15 +479,7 @@ class InputKicksInfoViewController: UIViewController, UITextViewDelegate, UIText
 
 extension InputKicksInfoViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        var sectionCount: Int // 表示するセクション数
-        // セクションの出し分け
-        if isNow {
-            sectionArray.removeAll(where: { $0 == InputSection.oneDate }) // [下ろした日]を配列から削除する
-            sectionCount = sectionArray.count
-        } else {
-            sectionCount = sectionArray.count
-        }
-        return sectionCount
+        return sectionArray.count
     }
     
     

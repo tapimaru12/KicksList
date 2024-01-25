@@ -41,6 +41,11 @@ class KicksDetailViewController: UIViewController {
         tableView.register(UINib(nibName: "ThreeLabelDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "threeLabelDetailCell")
         tableView.register(UINib(nibName: "AmountDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "amountDetailCell")
         
+        if isNow {
+            // 「手放した日」セクションを除外する
+            sectionArray.removeAll(where: { $0 == DetailSection.oneDate })
+        }
+        
         // DateFormatter
         dateFormatter.dateFormat = "yyyy/MM/dd"
         
@@ -248,16 +253,7 @@ class KicksDetailViewController: UIViewController {
 
 extension KicksDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        var sectionCount: Int // 表示するセクション数
-        // セクションの出し分け
-        if isNow {
-            // NowKicksを追加するあ場合は[下ろした日]セルを表示しな(配列から削除)
-            sectionArray.removeAll(where: { $0 == DetailSection.oneDate })
-            sectionCount = sectionArray.count
-        } else {
-            sectionCount = sectionArray.count
-        }
-        return sectionCount
+        return sectionArray.count
     }
     
     
