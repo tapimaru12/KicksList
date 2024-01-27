@@ -65,12 +65,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Now Kicks" id="Pml-aO-TcP">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.up.arrow.down" catalog="system" id="XR9-QL-vr7"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="AX3-Ww-MHU">
                             <connections>
                                 <segue destination="GG3-xz-U5Q" kind="show" identifier="toNowInput" id="VAJ-eo-3jZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nowKicksSortButton" destination="XR9-QL-vr7" id="60o-No-BtR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzy-Ye-FhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,12 +129,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Past Kicks" id="Yq6-Zl-ijF">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.up.arrow.down" catalog="system" id="aUe-8k-Jij"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="Bf4-Ib-rrJ">
                             <connections>
                                 <segue destination="rsS-2z-HA5" kind="show" identifier="toPastInput" id="VeS-Uk-6Td"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pastKicksSortButton" destination="aUe-8k-Jij" id="bn2-SP-HFx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40O-AP-7cQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,6 +156,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.arrow.down" catalog="system" width="128" height="97"/>
         <image name="now" width="25" height="25"/>
         <image name="past" width="25" height="25"/>
         <image name="plus" catalog="system" width="128" height="113"/>

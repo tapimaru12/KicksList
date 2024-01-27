@@ -2,16 +2,40 @@
 import UIKit
 import RealmSwift
 
+enum SortType {
+    case releaseDate
+    case buyDate
+    case firstDay
+    case lostDate
+}
+
+enum OrderType {
+    case ascending
+    case descending
+}
+
 class KicksListCollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nowKicksSortButton: UIBarButtonItem!
+    @IBOutlet weak var pastKicksSortButton: UIBarButtonItem!
     
     // 一行に表示するセルの数
     var itemsPerRow: Int = 2
     
+    // カレントタブのtagを保持
     var currentTab: Int = 0
     
+    // 各リストに表示するデータを保持
     var nowKicksDataList: [NowKicksDataModel] = []
     var pastKicksDataList: [PastKicksDataModel] = []
+    
+    // 各リストで選択されてるソートタイプを保持
+    var selectedNowKicksSortType = SortType.buyDate
+    var selectedPastKicksSortType = SortType.buyDate
+    
+    // 各リストで選択されてるオーダータイプを保持
+    var selectedNowKicksOrderType = OrderType.descending
+    var selectedPastKicksOrderType = OrderType.descending
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +49,18 @@ class KicksListCollectionViewController: UIViewController {
         collectionView!.register(cellNib, forCellWithReuseIdentifier: "twoGridCell")
         
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        if currentTab == 0 {
+            configureKicksSortButton(sortType: selectedNowKicksSortType, orderType: selectedNowKicksOrderType)
+        } else if currentTab == 1 {
+            configureKicksSortButton(sortType: selectedPastKicksSortType, orderType: selectedPastKicksOrderType)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setData(tab: currentTab)
-        collectionView.reloadData()
+        setData()
     }
     
     // InputInfoページの出し分け
@@ -45,20 +74,172 @@ class KicksListCollectionViewController: UIViewController {
         }
     }
     
-    // データを取得して表示する
-    func setData(tab: Int) {
-        let realm = try! Realm()
-        // 表示するタブがNowタブ(0)ならNowデータ、Pastタブ(1)ならPastデータを取得
-        if tab == 0 {
-            let result = realm.objects(NowKicksDataModel.self)
-            nowKicksDataList = Array(result)
-        } else if tab == 1 {
-            let result = realm.objects(PastKicksDataModel.self)
-            pastKicksDataList = Array(result)
+    // ソートメニューの設定
+    private func configureKicksSortButton(sortType: SortType, orderType: OrderType) {
+        let releaseDate = UIAction(title: "発売日",
+                                   state: sortType == SortType.releaseDate ? .on : .off) { [self] _ in
+            if currentTab == 0 {
+                selectedNowKicksSortType = .releaseDate
+                changeSort(sortType: selectedNowKicksSortType)
+            } else if currentTab == 1 {
+                selectedPastKicksSortType = .releaseDate
+                changeSort(sortType: selectedPastKicksSortType)
+            }
+        }
+        
+        let purchaseDate = UIAction(title: "購入日",
+                                    state: sortType == SortType.buyDate ? .on : .off) { [self] _ in
+            if currentTab == 0 {
+                selectedNowKicksSortType = .buyDate
+                changeSort(sortType: selectedNowKicksSortType)
+            } else if currentTab == 1 {
+                selectedPastKicksSortType = .buyDate
+                changeSort(sortType: selectedPastKicksSortType)
+            }
+        }
+        
+        let firstDay = UIAction(title: "下ろした日",
+                                state: sortType == SortType.firstDay ? .on : .off) { [self] _ in
+            if currentTab == 0 {
+                selectedNowKicksSortType = .firstDay
+                changeSort(sortType: selectedNowKicksSortType)
+            } else if currentTab == 1 {
+                selectedPastKicksSortType = .firstDay
+                changeSort(sortType: selectedPastKicksSortType)
+            }
+        }
+        
+        let lostDate = UIAction(title: "手放した日",
+                                state: sortType == SortType.lostDate ? .on : .off) { [self] _ in
+            selectedPastKicksSortType = .lostDate
+            changeSort(sortType: selectedPastKicksSortType)
+        }
+        
+        let ascending = UIAction(title: "昇順",
+                                 state: orderType == OrderType.ascending ? .on : .off) { [self] _ in
+            if currentTab == 0 {
+                selectedNowKicksOrderType = .ascending
+                changeSort(sortType: selectedNowKicksSortType)
+            } else if currentTab == 1 {
+                selectedPastKicksOrderType = .ascending
+                changeSort(sortType: selectedPastKicksSortType)
+            }
+        }
+        
+        let descending = UIAction(title: "降順",
+                                  state: orderType == OrderType.descending ? .on : .off) { [self] _ in
+            if currentTab == 0 {
+                selectedNowKicksOrderType = .descending
+                changeSort(sortType: selectedNowKicksSortType)
+            } else if currentTab == 1 {
+                selectedPastKicksOrderType = .descending
+                changeSort(sortType: selectedPastKicksSortType)
+            }
+        }
+        
+        let order = UIMenu(title: "順序", children: [ascending, descending])
+        
+        if currentTab == 0 {
+            nowKicksSortButton.menu = UIMenu(title: "", children: [releaseDate, purchaseDate, firstDay, order])
+        } else if currentTab == 1 {
+            pastKicksSortButton.menu = UIMenu(title: "", children: [releaseDate, purchaseDate, firstDay, lostDate, order])
+        }
+    }
+    
+    // ソート変更メソッド
+    func changeSort(sortType: SortType) {
+        // カレントタブによって扱うデータを変えて、昇順・降順含めてソート変更する
+        switch sortType {
+        case .releaseDate:
+            if currentTab == 0 {
+                nowKicksDataList.sort { (kicks1, kicks2) -> Bool in
+                    if selectedNowKicksOrderType == .ascending {
+                        return kicks1.releaseDate < kicks2.releaseDate
+                    } else {
+                        return kicks1.releaseDate > kicks2.releaseDate
+                    }
+                }
+            } else if currentTab == 1 {
+                pastKicksDataList.sort { (kicks1, kicks2) -> Bool in
+                    if selectedPastKicksOrderType == .ascending {
+                        return kicks1.releaseDate < kicks2.releaseDate
+                    } else {
+                        return kicks1.releaseDate > kicks2.releaseDate
+                    }
+                }
+            }
+            
+        case .buyDate:
+            if currentTab == 0 {
+                nowKicksDataList.sort { (kicks1, kicks2) -> Bool in
+                    if selectedNowKicksOrderType == .ascending {
+                        return kicks1.buyDate < kicks2.buyDate
+                    } else {
+                        return kicks1.buyDate > kicks2.buyDate
+                    }
+                }
+            } else if currentTab == 1 {
+                pastKicksDataList.sort { (kicks1, kicks2) -> Bool in
+                    if selectedPastKicksOrderType == .ascending {
+                        return kicks1.buyDate < kicks2.buyDate
+                    } else {
+                        return kicks1.buyDate > kicks2.buyDate
+                    }
+                }
+            }
+            
+        case .firstDay:
+            if currentTab == 0 {
+                nowKicksDataList.sort { (kicks1, kicks2) -> Bool in
+                    if selectedNowKicksOrderType == .ascending {
+                        return kicks1.firstDay < kicks2.firstDay
+                    } else {
+                        return kicks1.firstDay > kicks2.firstDay
+                    }
+                }
+            } else if currentTab == 1 {
+                pastKicksDataList.sort { (kicks1, kicks2) -> Bool in
+                    if selectedPastKicksOrderType == .ascending {
+                        return kicks1.firstDay < kicks2.firstDay
+                    } else {
+                        return kicks1.firstDay > kicks2.firstDay
+                    }
+                }
+            }
+            
+        case .lostDate:
+            pastKicksDataList.sort { (kicks1, kicks2) -> Bool in
+                if selectedPastKicksOrderType == .ascending {
+                    return kicks1.lostDate < kicks2.lostDate
+                } else {
+                    return kicks1.lostDate > kicks2.lostDate
+                }
+            }
+        }
+        
+        if currentTab == 0 {
+            configureKicksSortButton(sortType: selectedNowKicksSortType, orderType: selectedNowKicksOrderType)
+        } else if currentTab == 1 {
+            configureKicksSortButton(sortType: selectedPastKicksSortType, orderType: selectedPastKicksOrderType)
         }
         
         if let collectionView = collectionView {
             collectionView.reloadData()
+        }
+    }
+    
+    // データを取得して表示する
+    func setData() {
+        let realm = try! Realm()
+        // 表示するタブがNowタブ(0)ならNowデータ、Pastタブ(1)ならPastデータを取得
+        if currentTab == 0 {
+            let result = realm.objects(NowKicksDataModel.self)
+            nowKicksDataList = Array(result)
+            changeSort(sortType: selectedNowKicksSortType)
+        } else if currentTab == 1 {
+            let result = realm.objects(PastKicksDataModel.self)
+            pastKicksDataList = Array(result)
+            changeSort(sortType: selectedPastKicksSortType)
         }
     }
     

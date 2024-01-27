@@ -29,7 +29,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         if let navigationController = viewController as? UINavigationController {
             if let kicksListCollectionVC = navigationController.topViewController as? KicksListCollectionViewController {
                 kicksListCollectionVC.currentTab = tabBarController.selectedIndex
-                kicksListCollectionVC.setData(tab: kicksListCollectionVC.currentTab)
+                kicksListCollectionVC.setData()
             }
         }
     }
