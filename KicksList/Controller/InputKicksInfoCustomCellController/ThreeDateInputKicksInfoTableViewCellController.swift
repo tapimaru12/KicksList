@@ -8,8 +8,8 @@ protocol DidChangeDatePickerDelegateProtocol {
 class ThreeDateInputKicksInfoTableViewCellController: UITableViewCell {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var releaseDatePicker: UIDatePicker!
-    @IBOutlet weak var buyDateLabel: UILabel!
-    @IBOutlet weak var buyDatePicker: UIDatePicker!
+    @IBOutlet weak var purchaseDateLabel: UILabel!
+    @IBOutlet weak var purchaseDatePicker: UIDatePicker!
     @IBOutlet weak var firstDayLabel: UILabel!
     @IBOutlet weak var firstDayPicker: UIDatePicker!
     
@@ -19,7 +19,7 @@ class ThreeDateInputKicksInfoTableViewCellController: UITableViewCell {
         super.awakeFromNib()
         
         setupDatePicker(datePicker: releaseDatePicker)
-        setupDatePicker(datePicker: buyDatePicker)
+        setupDatePicker(datePicker: purchaseDatePicker)
         setupDatePicker(datePicker: firstDayPicker)
     }
 

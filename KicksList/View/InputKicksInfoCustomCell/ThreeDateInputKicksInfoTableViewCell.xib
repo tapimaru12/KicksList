@@ -78,10 +78,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="buyDateLabel" destination="eFp-4V-dS1" id="I0j-EN-TMc"/>
-                <outlet property="buyDatePicker" destination="gYC-l2-zdV" id="W6d-57-hdI"/>
                 <outlet property="firstDayLabel" destination="U9j-2I-Vaw" id="3Kz-FV-oF1"/>
                 <outlet property="firstDayPicker" destination="tDg-ey-oZD" id="qOp-2j-Djl"/>
+                <outlet property="purchaseDateLabel" destination="eFp-4V-dS1" id="I0j-EN-TMc"/>
+                <outlet property="purchaseDatePicker" destination="gYC-l2-zdV" id="W6d-57-hdI"/>
                 <outlet property="releaseDateLabel" destination="Zxd-ea-obu" id="M6a-bU-0YQ"/>
                 <outlet property="releaseDatePicker" destination="GvP-6c-Wqd" id="VjW-0r-Qof"/>
             </connections>

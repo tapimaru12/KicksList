@@ -93,7 +93,7 @@ class KicksDetailViewController: UIViewController {
             vc.inputColor2 = nowKicksDetail?.color2
             vc.inputColor3 = nowKicksDetail?.color3
             vc.selectedReleaseDate = nowKicksDetail?.releaseDate
-            vc.selectedBuyDate = nowKicksDetail?.buyDate
+            vc.selectedPurchaseDate = nowKicksDetail?.purchaseDate
             vc.selectedFirstDay = nowKicksDetail?.firstDay
             vc.inputPurchaseLocation = nowKicksDetail?.purchaseLocation
             vc.inputListPrice = nowKicksDetail?.listPrice
@@ -118,7 +118,7 @@ class KicksDetailViewController: UIViewController {
             vc.inputColor2 = pastKicksDetail?.color2
             vc.inputColor3 = pastKicksDetail?.color3
             vc.selectedReleaseDate = pastKicksDetail?.releaseDate
-            vc.selectedBuyDate = pastKicksDetail?.buyDate
+            vc.selectedPurchaseDate = pastKicksDetail?.purchaseDate
             vc.selectedFirstDay = pastKicksDetail?.firstDay
             vc.selectedLostDate = pastKicksDetail?.lostDate
             vc.inputPurchaseLocation = pastKicksDetail?.purchaseLocation
@@ -162,7 +162,7 @@ class KicksDetailViewController: UIViewController {
         vc.inputColor2 = nowKicksDetail?.color2
         vc.inputColor3 = nowKicksDetail?.color3
         vc.selectedReleaseDate = nowKicksDetail?.releaseDate
-        vc.selectedBuyDate = nowKicksDetail?.buyDate
+        vc.selectedPurchaseDate = nowKicksDetail?.purchaseDate
         vc.selectedFirstDay = nowKicksDetail?.firstDay
         vc.selectedLostDate = Date()
         vc.inputPurchaseLocation = nowKicksDetail?.purchaseLocation
@@ -338,11 +338,11 @@ extension KicksDetailViewController: UITableViewDelegate, UITableViewDataSource 
             threeDateCell.titleLabel3.text = "下ろした日"
             if let now = nowKicksDetail {
                 threeDateCell.detailLabel1.text = dateFormatter.string(from: now.releaseDate)
-                threeDateCell.detailLabel2.text = dateFormatter.string(from: now.buyDate)
+                threeDateCell.detailLabel2.text = dateFormatter.string(from: now.purchaseDate)
                 threeDateCell.detailLabel3.text = dateFormatter.string(from: now.firstDay)
             } else if let past = pastKicksDetail {
                 threeDateCell.detailLabel1.text = dateFormatter.string(from: past.releaseDate)
-                threeDateCell.detailLabel2.text = dateFormatter.string(from: past.buyDate)
+                threeDateCell.detailLabel2.text = dateFormatter.string(from: past.purchaseDate)
                 threeDateCell.detailLabel3.text = dateFormatter.string(from: past.firstDay)
             }
             return threeDateCell

@@ -4,7 +4,7 @@ import RealmSwift
 
 enum SortType {
     case releaseDate
-    case buyDate
+    case purchaseDate
     case firstDay
     case lostDate
 }
@@ -30,8 +30,8 @@ class KicksListCollectionViewController: UIViewController {
     var pastKicksDataList: [PastKicksDataModel] = []
     
     // 各リストで選択されてるソートタイプを保持
-    var selectedNowKicksSortType = SortType.buyDate
-    var selectedPastKicksSortType = SortType.buyDate
+    var selectedNowKicksSortType = SortType.purchaseDate
+    var selectedPastKicksSortType = SortType.purchaseDate
     
     // 各リストで選択されてるオーダータイプを保持
     var selectedNowKicksOrderType = OrderType.descending
@@ -88,12 +88,12 @@ class KicksListCollectionViewController: UIViewController {
         }
         
         let purchaseDate = UIAction(title: "購入日",
-                                    state: sortType == SortType.buyDate ? .on : .off) { [self] _ in
+                                    state: sortType == SortType.purchaseDate ? .on : .off) { [self] _ in
             if currentTab == 0 {
-                selectedNowKicksSortType = .buyDate
+                selectedNowKicksSortType = .purchaseDate
                 changeSort(sortType: selectedNowKicksSortType)
             } else if currentTab == 1 {
-                selectedPastKicksSortType = .buyDate
+                selectedPastKicksSortType = .purchaseDate
                 changeSort(sortType: selectedPastKicksSortType)
             }
         }
@@ -169,21 +169,21 @@ class KicksListCollectionViewController: UIViewController {
                 }
             }
             
-        case .buyDate:
+        case .purchaseDate:
             if currentTab == 0 {
                 nowKicksDataList.sort { (kicks1, kicks2) -> Bool in
                     if selectedNowKicksOrderType == .ascending {
-                        return kicks1.buyDate < kicks2.buyDate
+                        return kicks1.purchaseDate < kicks2.purchaseDate
                     } else {
-                        return kicks1.buyDate > kicks2.buyDate
+                        return kicks1.purchaseDate > kicks2.purchaseDate
                     }
                 }
             } else if currentTab == 1 {
                 pastKicksDataList.sort { (kicks1, kicks2) -> Bool in
                     if selectedPastKicksOrderType == .ascending {
-                        return kicks1.buyDate < kicks2.buyDate
+                        return kicks1.purchaseDate < kicks2.purchaseDate
                     } else {
-                        return kicks1.buyDate > kicks2.buyDate
+                        return kicks1.purchaseDate > kicks2.purchaseDate
                     }
                 }
             }
@@ -327,6 +327,7 @@ extension KicksListCollectionViewController: UICollectionViewDelegate, UICollect
         if currentTab == 0 {
             vc.isNow = true
             vc.nowKicksDetail = nowKicksDataList[indexPath.row]
+            print(vc.nowKicksDetail)
         } else if currentTab == 1 {
             vc.isNow = false
             vc.pastKicksDetail = pastKicksDataList[indexPath.row]

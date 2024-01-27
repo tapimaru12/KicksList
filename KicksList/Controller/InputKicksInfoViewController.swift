@@ -53,7 +53,7 @@ class InputKicksInfoViewController: UIViewController, UITextViewDelegate, UIText
     var inputColor2: String?
     var inputColor3: String?
     var selectedReleaseDate: Date?
-    var selectedBuyDate: Date?
+    var selectedPurchaseDate: Date?
     var selectedFirstDay: Date?
     var selectedLostDate: Date?
     var inputPurchaseLocation: String?
@@ -251,8 +251,8 @@ class InputKicksInfoViewController: UIViewController, UITextViewDelegate, UIText
         if let threeDateCell = tableView.cellForRow(at: IndexPath(row: 0, section: selectedSection!)) as? ThreeDateInputKicksInfoTableViewCellController {
             if datePicker == threeDateCell.releaseDatePicker {
                 selectedReleaseDate = datePicker.date
-            } else if datePicker == threeDateCell.buyDatePicker {
-                selectedBuyDate = datePicker.date
+            } else if datePicker == threeDateCell.purchaseDatePicker {
+                selectedPurchaseDate = datePicker.date
             } else if datePicker == threeDateCell.firstDayPicker {
                 selectedFirstDay = datePicker.date
             }
@@ -309,7 +309,7 @@ class InputKicksInfoViewController: UIViewController, UITextViewDelegate, UIText
                     nowData.color2 = inputColor2 ?? ""
                     nowData.color3 = inputColor3 ?? ""
                     nowData.releaseDate = selectedReleaseDate ?? Date()
-                    nowData.buyDate = selectedBuyDate ?? Date()
+                    nowData.purchaseDate = selectedPurchaseDate ?? Date()
                     nowData.firstDay = selectedFirstDay ?? Date()
                     nowData.purchaseLocation = inputPurchaseLocation ?? ""
                     nowData.listPrice = inputListPrice ?? 0
@@ -348,7 +348,7 @@ class InputKicksInfoViewController: UIViewController, UITextViewDelegate, UIText
                     pastData.color2 = inputColor2 ?? ""
                     pastData.color3 = inputColor3 ?? ""
                     pastData.releaseDate = selectedReleaseDate ?? Date()
-                    pastData.buyDate = selectedBuyDate ?? Date()
+                    pastData.purchaseDate = selectedPurchaseDate ?? Date()
                     pastData.firstDay = selectedFirstDay ?? Date()
                     pastData.lostDate = selectedLostDate ?? Date()
                     pastData.purchaseLocation = inputPurchaseLocation ?? ""
@@ -387,7 +387,7 @@ class InputKicksInfoViewController: UIViewController, UITextViewDelegate, UIText
                 pastKicksData.color2 = inputColor2 ?? ""
                 pastKicksData.color3 = inputColor3 ?? ""
                 pastKicksData.releaseDate = selectedReleaseDate ?? Date()
-                pastKicksData.buyDate = selectedBuyDate ?? Date()
+                pastKicksData.purchaseDate = selectedPurchaseDate ?? Date()
                 pastKicksData.firstDay = selectedFirstDay ?? Date()
                 pastKicksData.lostDate = selectedLostDate ?? Date()
                 pastKicksData.purchaseLocation = inputPurchaseLocation ?? ""
@@ -425,7 +425,7 @@ class InputKicksInfoViewController: UIViewController, UITextViewDelegate, UIText
                     nowKicksData.color2 = inputColor2 ?? ""
                     nowKicksData.color3 = inputColor3 ?? ""
                     nowKicksData.releaseDate = selectedReleaseDate ?? Date()
-                    nowKicksData.buyDate = selectedBuyDate ?? Date()
+                    nowKicksData.purchaseDate = selectedPurchaseDate ?? Date()
                     nowKicksData.firstDay = selectedFirstDay ?? Date()
                     nowKicksData.purchaseLocation = inputPurchaseLocation ?? ""
                     nowKicksData.listPrice = inputListPrice ?? 0
@@ -453,7 +453,7 @@ class InputKicksInfoViewController: UIViewController, UITextViewDelegate, UIText
                     pastKicksData.color2 = inputColor2 ?? ""
                     pastKicksData.color3 = inputColor3 ?? ""
                     pastKicksData.releaseDate = selectedReleaseDate ?? Date()
-                    pastKicksData.buyDate = selectedBuyDate ?? Date()
+                    pastKicksData.purchaseDate = selectedPurchaseDate ?? Date()
                     pastKicksData.firstDay = selectedFirstDay ?? Date()
                     pastKicksData.lostDate = selectedLostDate ?? Date()
                     pastKicksData.purchaseLocation = inputPurchaseLocation ?? ""
@@ -558,13 +558,13 @@ extension InputKicksInfoViewController: UITableViewDelegate, UITableViewDataSour
             let threeDateCell = tableView.dequeueReusableCell(withIdentifier: "threeDateInputCell", for: indexPath) as! ThreeDateInputKicksInfoTableViewCellController
             threeDateCell.delegate = self
             threeDateCell.releaseDatePicker.tag = indexPath.section
-            threeDateCell.buyDatePicker.tag = indexPath.section
+            threeDateCell.purchaseDatePicker.tag = indexPath.section
             threeDateCell.firstDayPicker.tag = indexPath.section
             threeDateCell.releaseDateLabel.text = "発売日"
-            threeDateCell.buyDateLabel.text = "購入日"
+            threeDateCell.purchaseDateLabel.text = "購入日"
             threeDateCell.firstDayLabel.text = "下ろした日"
             threeDateCell.releaseDatePicker.date = selectedReleaseDate ?? Date()
-            threeDateCell.buyDatePicker.date = selectedBuyDate ?? Date()
+            threeDateCell.purchaseDatePicker.date = selectedPurchaseDate ?? Date()
             threeDateCell.firstDayPicker.date = selectedFirstDay ?? Date()
             return threeDateCell
             

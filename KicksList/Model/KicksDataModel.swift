@@ -12,7 +12,7 @@ class NowKicksDataModel: Object {
     @objc dynamic var color2: String = "" // カラー②
     @objc dynamic var color3: String = "" // カラー③
     @objc dynamic var releaseDate: Date = Date() // 発売日
-    @objc dynamic var buyDate: Date = Date() // 購入日
+    @objc dynamic var purchaseDate: Date = Date() // 購入日
     @objc dynamic var firstDay: Date = Date() // 下ろした日
     @objc dynamic var purchaseLocation: String = "" // 購入場所
     @objc dynamic var listPrice: Int32 = 0 // 定価
@@ -38,7 +38,7 @@ class PastKicksDataModel: Object {
     @objc dynamic var color2: String = "" // カラー②
     @objc dynamic var color3: String = "" // カラー③
     @objc dynamic var releaseDate: Date = Date() // 発売日
-    @objc dynamic var buyDate: Date = Date() // 購入日
+    @objc dynamic var purchaseDate: Date = Date() // 購入日
     @objc dynamic var firstDay: Date = Date() // 下ろした日
     @objc dynamic var lostDate: Date = Date() // 手放した日
     @objc dynamic var purchaseLocation: String = "" // 購入場所

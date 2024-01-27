@@ -11,12 +11,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // Realm migration
         let config = Realm.Configuration(
-            schemaVersion: 1, // schemaVersionを0から1に増加。
+            schemaVersion: 2, // schemaVersionを0から1に増加。
             migrationBlock: { migration, oldSchemaVersion in
                 // 設定前のschemaVersionが最新の数値より小さい場合、マイグレーションを実行。
-                if oldSchemaVersion < 1 {
-                    migration.renameProperty(onType: NowKicksDataModel.className(), from: "purchaseStore", to: "purchaseLocation")
-                    migration.renameProperty(onType: PastKicksDataModel.className(), from: "purchaseStore", to: "purchaseLocation")
+                if oldSchemaVersion < 2 {
+                    migration.renameProperty(onType: NowKicksDataModel.className(), from: "buyDate", to: "purchaseDate")
+                    migration.renameProperty(onType: PastKicksDataModel.className(), from: "buyDate", to: "purchaseDate")
                 }
             })
         Realm.Configuration.defaultConfiguration = config
