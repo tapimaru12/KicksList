@@ -31,7 +31,7 @@ class KicksListCollectionViewController: UIViewController {
     
     // 各リストで選択されてるソートタイプを保持
     var selectedNowKicksSortType = SortType.purchaseDate
-    var selectedPastKicksSortType = SortType.purchaseDate
+    var selectedPastKicksSortType = SortType.lostDate
     
     // 各リストで選択されてるオーダータイプを保持
     var selectedNowKicksOrderType = OrderType.descending
