@@ -1,8 +1,6 @@
 # Kicks List 👟
 
-![KickList_1](https://github.com/tapimaru12/TwitterSampleApp/assets/73249060/ebe48f87-09f8-433e-ae90-ab3d177f5de6)
-
-![KickList_2](https://github.com/tapimaru12/TwitterSampleApp/assets/73249060/9d04d146-966b-4277-973f-b4ba6c2e9f4f)
+![KicksList](https://github.com/tapimaru12/KicksList/assets/73249060/1b09ea3e-e89b-4187-9515-c68960f82ad2)
 
 ## 環境
 
